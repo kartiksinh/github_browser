@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Pluralsight</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-controller="MainCtrl" class="kk">
+    <h1>{{message}}</h1>
+    <div>{{error}}</div>
+    {{Countdown}}
+    <div>
+      <form name="searchUser" ng-submit="search(userName)">
+        <input type="search" required placeholder="search user" ng-model="userName">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div ng-include="'userdetails.html'" ng-show="user" class="kk"></div>
+        
+    <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
